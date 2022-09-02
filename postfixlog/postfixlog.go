@@ -92,7 +92,7 @@ func (sb *StatsBin) DisplayDelay(now uint64, key string, f64s sort.Float64Slice)
 func (sb *StatsBin) Display(duration float64) {
 	now := uint64(time.Now().Unix())
 	sb.DisplayDelay(now, "total", sb.delays)
-	sb.DisplayDelay(now, "recving", sb.receivingDelay)
+	sb.DisplayDelay(now, "receiving", sb.receivingDelay)
 	sb.DisplayDelay(now, "queuing", sb.queuingDelay)
 	sb.DisplayDelay(now, "connection", sb.connectionDelay)
 	sb.DisplayDelay(now, "transmission", sb.connectionDelay)
